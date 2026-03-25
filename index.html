@@ -74,7 +74,7 @@
   /* Profile photo */
   .profile-photo-wrap { margin-bottom: 1.8rem; }
   .profile-photo {
-    width: 110px; height: 110px;
+    width: 200px; height: 200px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -109,7 +109,30 @@
   .stat:hover::before { transform: scaleX(1); }
   .stat-n { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; }
   .stat-l { font-family: 'DM Mono', monospace; font-size: 0.67rem; color: var(--muted); text-transform: uppercase; letter-spacing: .09em; margin-top: .4rem; }
+   .stats-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
 
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.profile-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.stats-panel { grid-template-columns: repeat(2, 1fr); }
+
+.stats-grid {
+  grid-template-columns: 1fr;
+}
   /* SECTIONS */
   .sec { padding: 6rem 5vw; max-width: 1240px; margin: 0 auto; }
   .full-bg { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -241,14 +264,7 @@
   <div class="hero-dots"></div>
   <div class="hero-inner">
     <div>
-      <div class="profile-photo-wrap">
-        <img
-          src="https://i.postimg.cc/QCFDhgDL/1720614918589-(1).jpg"
-          alt="Santhosh Kumar Subramani"
-          class="profile-photo"
-          onerror="this.style.display='none'"
-        />
-      </div>
+     
       <h1 class="hero-name">Santhosh<br><em>Kumar</em><br>Subramani</h1>
       <p class="hero-role">// Team Lead – SAP MM &amp; PM &nbsp;·&nbsp; Senior Consultant &nbsp;·&nbsp; Trainer</p>
       <p class="hero-loc">&#128205; Chennai, Tamil Nadu, India &nbsp;·&nbsp; 500+ LinkedIn Connections</p>
@@ -260,11 +276,41 @@
       </div>
     </div>
     <div class="stats-panel">
-      <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Years Total Exp.</div></div>
-      <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Years SAP Consulting</div></div>
-      <div class="stat"><div class="stat-n">5</div><div class="stat-l">Companies Served</div></div>
-      <div class="stat"><div class="stat-n">2</div><div class="stat-l">SAP Certifications</div></div>
+
+  <!-- Profile Image -->
+  <div class="profile-photo-wrap">
+    <img
+      src="https://i.postimg.cc/QCFDhgDL/1720614918589-(1).jpg"
+      alt="Santhosh Kumar Subramani"
+      class="profile-photo"
+      onerror="this.style.display='none'"
+    />
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-n">10+</div>
+      <div class="stat-l">Years Total Exp.</div>
     </div>
+
+    <div class="stat">
+      <div class="stat-n">6+</div>
+      <div class="stat-l">Years SAP Consulting</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-n">5</div>
+      <div class="stat-l">Companies Served</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-n">2</div>
+      <div class="stat-l">SAP Certifications</div>
+    </div>
+  </div>
+
+</div>
   </div>
 </div>
 
